@@ -1,0 +1,6 @@
+<h1>Category#show</h1>
+<p>Find me in app/views/category/show.html.erb</p>
+<% @topics.each do |topic| %>
+  <a href="<%=  category_topic_path(topic.id) %>"><%= topic.title %> <br></a>
+  &nbsp <%= topic.body %> <br><br>
+<% end %>
