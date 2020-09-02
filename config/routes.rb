@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'login/new'
+  get 'login/create'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   get 'topics/index'
