@@ -6,6 +6,13 @@ module Api
         @categories = Category.all
         render json: @categories
       end
+
+      def show
+        @category = Category.find(params[:id])
+        @topics = @category.topics.all
+        render json: @topics
+      end
+
     end
   end
 end
