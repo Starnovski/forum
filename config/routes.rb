@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'login/new'
   get 'login/create'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users
+  devise_for :users, controllers: {registrations: 'users/registrations'}
   get 'topics/index'
   root 'categories#index'
   get 'topic/index'
