@@ -2,9 +2,13 @@
 <p>Find me in app/views/topics/show.html.erb</p>
 
 <%= @topic.title %><br>
+Added by <%= @topic.user.email %> <br>
 <%= @topic.body %><br><br>
+
+<br>Total: <%= @comments.count %> <br>
 
 <% @comments.each do |comment| %>
   <%= comment.title %> <br>
+  Added by <%= comment.user.email %><br>
   &nbsp <%= comment.body %> <br><br>
 <% end %>

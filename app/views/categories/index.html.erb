@@ -1,6 +1,15 @@
 <h1>Category#index</h1>
 <p>Find me in app/views/category/index.html.erb</p>
 <% @categories.each do |category| %>
-  <a href="<%=  category_path(category.id) %>"><%= category.title %></a><br>
-  &nbsp <%= category.description %> <br><br>
+  <div class="row">
+    <div class="col-md-1">
+      <% if category.picture_url %>
+      <%= image_tag category.picture_url(:thumb) %>
+      <% end %>
+    </div>
+    <div class="col-md-10">
+      <a href="<%=  category_path(category.id) %>"><%= category.title %></a><br>
+      &nbsp <%= category.description %> <br><br>
+    </div>
+  </div>
 <% end %>
