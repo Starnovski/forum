@@ -3,5 +3,5 @@
 <% @topics.each do |topic| %>
   <a href="<%=  category_topic_path(@category.id, topic.id) %>"><%= topic.title %> <br></a>
   Added by <%= topic.user.email %> <br>
-  &nbsp <%= topic.body %> <br><br>
+  &nbsp <%= topic.body.truncate(500) %> <br><br>
 <% end %>
