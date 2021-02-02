@@ -1,0 +1,10 @@
+<h1>Comment#new</h1>
+<p>Find me in app/views/comments/new.html.erb</p>
+<%= form_for [@category, @topic, @comment] do |form| %>
+  <%= form.text_field :title %>
+  <br>
+  <%= form.text_area :body, size: "60x20" %>
+  <br>
+  <%= form.hidden_field :topic_id, :value => @topic.id %>
+  <%= form.submit "Create" %>
+<% end %>
