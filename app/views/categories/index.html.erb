@@ -1,5 +1,11 @@
 <h1>Category#index</h1>
 <p>Find me in app/views/category/index.html.erb</p>
+<% @effects.each do |effect| %>
+  <div class="col-md-10">
+    <%= effect['title'] %></a><br>
+    &nbsp
+  </div>
+<% end %>
 <% @categories.each do |category| %>
   <div class="row">
     <div class="col-md-1">
